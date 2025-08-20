@@ -143,7 +143,7 @@ mkdir -p /usr/local/etc/xray
 mkdir -p /var/lib/scrz-prem >/dev/null 2>&1
 echo "IP=$host" >> /var/lib/scrz-prem/ipvps.conf
 echo $host > /etc/xray/domain
-wget https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/eddyme23/AIO/main/cf.sh && chmod +x cf.sh && ./cf.sh
 
 sleep 2
 
@@ -152,64 +152,71 @@ echo -e "$white\033[0;34m┌─────────────────�
 echo -e "                          ⇱ INSTALL DOMAIN ⇲            "
 echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
 sleep 1
-wget https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/eddyme23/AIO/main/cf.sh && chmod +x cf.sh && ./cf.sh
 #install jembot
 echo -e "$white\033[0;34m┌─────────────────────────────────────────┐${NC}"
 echo -e " \E[41;1;39m           ⇱ Install Jembot ⇲            \E[0m$NC"
 echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
 sleep 1 
-wget -q https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/jembot.sh && chmod +x jembot.sh && ./jembot.sh
+wget -q https://raw.githubusercontent.com/eddyme23/AIO/main/jembot.sh && chmod +x jembot.sh && ./jembot.sh
 #install ssh-vpn
 echo -e "$white\033[0;34m┌─────────────────────────────────────────┐${NC}"
 echo -e " \E[41;1;39m          ⇱ Install SSH / WS ⇲           \E[0m$NC"
 echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
 sleep 1
-wget -q https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget -q https://raw.githubusercontent.com/eddyme23/AIO/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #install ins-xray
 echo -e "$white\033[0;34m┌─────────────────────────────────────────┐${NC}"
 echo -e " \E[41;1;39m            ⇱ Install Xray ⇲             \E[0m$NC"
 echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
 sleep 1 
-wget -q https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget -q https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget -q https://raw.githubusercontent.com/eddyme23/AIO/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget -q https://raw.githubusercontent.com/eddyme23/AIO/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+
+#install slowdns
+echo -e "$white\033[0;34m┌─────────────────────────────────────────┐${NC}"
+echo -e " \E[41;1;39m          ⇱ Install SlowDNS ⇲           \E[0m$NC"
+echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
+sleep 1
+wget -q https://raw.githubusercontent.com/eddyme23/AIO/main/install-slowdns.sh && chmod +x install-slowdns.sh && ./install-slowdns.sh
 
 # // Download Data
 echo -e "${GREEN}Download Data${NC}"
-wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/add-ws.sh"
-wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/add-ssws.sh"
-wget -q -O /usr/bin/add-socks "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/add-socks.sh"
-wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/add-vless.sh"
-wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/add-tr.sh"
-wget -q -O /usr/bin/add-trgo "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/add-trgo.sh"
-wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/autoreboot.sh"
-wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/restart.sh"
-wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/tendang.sh"
-wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/clearlog.sh"
-wget -q -O /usr/bin/running "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/running.sh"
-wget -q -O /usr/bin/cek-trafik "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/cek-trafik.sh"
-wget -q -O /usr/bin/cek-speed "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/speedtes_cli.py"
-wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/cek-bandwidth.sh"
-wget -q -O /usr/bin/cek-ram "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/ram.sh"
-wget -q -O /usr/bin/limit-speed "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/limit-speed.sh"
-wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/menu-vless.sh"
-wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/menu-vmess.sh"
-wget -q -O /usr/bin/menu-socks "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/menu-socks.sh"
-wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/menu-ss.sh"
-wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/menu-trojan.sh"
-wget -q -O /usr/bin/menu-trgo "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/menu-trgo.sh"
-wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/menu-ssh.sh"
-wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/menu-bckp-telegram.sh"
-wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/menu-bckp-github.sh"
-wget -q -O /usr/bin/bckp "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/bckpbot.sh"
-wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/usernew.sh"
-# wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/menu.sh"
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/menu4.sh"
-wget -q -O /usr/bin/wbm "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/webmin.sh"
-wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/xp.sh"
-wget -q -O /usr/bin/update "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/update.sh"
-wget -q -O /usr/bin/dns "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/dns.sh"
-wget -q -O /usr/bin/netf "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/netf.sh"
-wget -q -O /usr/bin/bbr "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/bbr.sh"
+wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/eddyme23/AIO/main/add-ws.sh"
+wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/eddyme23/AIO/main/add-ssws.sh"
+wget -q -O /usr/bin/add-socks "https://raw.githubusercontent.com/eddyme23/AIO/main/add-socks.sh"
+wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/eddyme23/AIO/main/add-vless.sh"
+wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/eddyme23/AIO/main/add-tr.sh"
+wget -q -O /usr/bin/add-trgo "https://raw.githubusercontent.com/eddyme23/AIO/main/add-trgo.sh"
+wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/eddyme23/AIO/main/autoreboot.sh"
+wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/eddyme23/AIO/main/restart.sh"
+wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/eddyme23/AIO/main/tendang.sh"
+wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/eddyme23/AIO/main/clearlog.sh"
+wget -q -O /usr/bin/running "https://raw.githubusercontent.com/eddyme23/AIO/main/running.sh"
+wget -q -O /usr/bin/cek-trafik "https://raw.githubusercontent.com/eddyme23/AIO/main/cek-trafik.sh"
+wget -q -O /usr/bin/cek-speed "https://raw.githubusercontent.com/eddyme23/AIO/main/speedtes_cli.py"
+wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/eddyme23/AIO/main/cek-bandwidth.sh"
+wget -q -O /usr/bin/cek-ram "https://raw.githubusercontent.com/eddyme23/AIO/main/ram.sh"
+wget -q -O /usr/bin/limit-speed "https://raw.githubusercontent.com/eddyme23/AIO/main/limit-speed.sh"
+wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/eddyme23/AIO/main/menu-vless.sh"
+wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/eddyme23/AIO/main/menu-vmess.sh"
+wget -q -O /usr/bin/menu-socks "https://raw.githubusercontent.com/eddyme23/AIO/main/menu-socks.sh"
+wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/eddyme23/AIO/main/menu-ss.sh"
+wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/eddyme23/AIO/main/menu-trojan.sh"
+wget -q -O /usr/bin/menu-trgo "https://raw.githubusercontent.com/eddyme23/AIO/main/menu-trgo.sh"
+wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/eddyme23/AIO/main/menu-ssh.sh"
+wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/eddyme23/AIO/main/menu-bckp-telegram.sh"
+wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/eddyme23/AIO/main/menu-bckp-github.sh"
+wget -q -O /usr/bin/bckp "https://raw.githubusercontent.com/eddyme23/AIO/main/bckpbot.sh"
+wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/eddyme23/AIO/main/usernew.sh"
+# wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/eddyme23/AIO/main/menu.sh"
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/eddyme23/AIO/main/menu4.sh"
+wget -q -O /usr/bin/wbm "https://raw.githubusercontent.com/eddyme23/AIO/main/webmin.sh"
+wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/eddyme23/AIO/main/xp.sh"
+wget -q -O /usr/bin/update "https://raw.githubusercontent.com/eddyme23/AIO/main/update.sh"
+wget -q -O /usr/bin/dns "https://raw.githubusercontent.com/eddyme23/AIO/main/dns.sh"
+wget -q -O /usr/bin/netf "https://raw.githubusercontent.com/eddyme23/AIO/main/netf.sh"
+wget -q -O /usr/bin/bbr "https://raw.githubusercontent.com/eddyme23/AIO/main/bbr.sh"
 #wget -q -O /usr/bin/del-xrays "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/del-xrays.sh"
 #wget -q -O /usr/bin/user-xrays "https://raw.githubusercontent.com/ica4me/FreeScriptVPSTunnel/main/user-xrays.sh"
 chmod +x /usr/bin/add-ws
@@ -328,21 +335,6 @@ gg="PM"
 else
 gg="AM"
 fi
-echo -e "[ ${green}Pleas Wait Update DB ${NC} ]"
-git clone https://github.com/NevermoreSSH/limit.git /root/limit/ &> /dev/null
-babu=$(cat /etc/.geovpn/license.key)
-echo -e "$babu $IP $Masa_Laku_License_Berlaku_Sampai" >> /root/limit/limit.txt
-cd /root/limit
-    git config --global user.email "pribadi.no99@gmail.com" &> /dev/null
-    git config --global user.name "NevermoreSSH" &> /dev/null
-    rm -fr .git &> /dev/null
-    git init &> /dev/null
-    git add . &> /dev/null
-    git commit -m m &> /dev/null
-    git branch -M main &> /dev/null
-    git remote add origin https://github.com/NevermoreSSH/limit
-    git push -f https://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@github.com/kenDevXD/limit.git &> /dev/null
-cd
 echo "1.1" >> /home/.ver
 rm -fr /root/limit
 curl -sS ifconfig.me > /etc/myipvps
@@ -356,8 +348,10 @@ echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 22"  | tee -a log-install.txt
 echo "   - SSH Websocket           : 80" | tee -a log-install.txt
 echo "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
-echo "   - Stunnel5                : 447, 777" | tee -a log-install.txt
+echo "   - Stunnel5                : 443, 447, 777" | tee -a log-install.txt
 echo "   - Dropbear                : 109, 143" | tee -a log-install.txt
+echo "   - SlowDNS                 : 53, 5300" | tee -a log-install.txt
+echo "   - Hysteria UDP            : 36712" | tee -a log-install.txt
 echo "   - Badvpn                  : 7100-7300" | tee -a log-install.txt
 echo "   - Nginx                   : 81" | tee -a log-install.txt
 echo "   - XRAY  Vmess TLS         : 443" | tee -a log-install.txt
