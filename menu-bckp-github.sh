@@ -2,7 +2,7 @@
 # =========================================
 # Quick Setup | Script Setup Manager
 # Edition : Stable Edition V1.0
-# Auther  : Tech Guruz GH
+# Auther  : NevermoreSSH
 # (C) Copyright 2022
 # =========================================
 # // Export Color & Information
