@@ -77,7 +77,7 @@ apt --fix-missing update && apt update && apt upgrade -y && apt install -y bzip2
 ✅ XRAY VMESS WEBSOCKET TLS & NON-TLS 443/80<br>
 ✅ XRAY VLESS WEBSOCKET TLS & NON-TLS 443/80<br>
 ✅ XRAY TROJAN WEBSOCKET TLS & NON-TLS 443/80<br>
-✅ STUNNEL TLS 443<br>
+✅ STUNNEL TLS 447<br>
 ✅ SLOWDNS 53<br>
 ✅ UDP HYSTERIA<br>
 <br>
